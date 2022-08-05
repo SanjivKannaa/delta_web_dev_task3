@@ -5,8 +5,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>settings | Slambook</title>
+    <style>
+        body{
+            background-color: rgb(53, 53, 53);
+        }
+        .back_button{
+            position: fixed;
+            height: 50px;
+            width: 100px;
+            margin-top: 10px;
+            margin-left: 20px;
+            background-color: rgb(90, 90, 90);
+            color: black;
+            border-radius: 10%;
+        }
+        .dropbtn {
+            position: fixed;
+            margin-left: 1350px;
+            margin-top: 0px;
+            background-color: rgb(90, 90, 90);
+            color: white;
+            padding: 16px;
+            font-size: 34px;
+            border: none;
+            height: 75px;
+            width: 300px;
+            border-radius: 0%;
+            font-size: 16px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: rgb(90, 90, 90);
+            min-width: 120px;
+            margin-left: 80px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 5px;
+            border-color: white;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            margin-left: 1350px;
+            margin-top: -10px;
+        }
+        .dropdown:hover .dropbtn {
+            height: 60px;
+            width: 310px;
+            margin-left: 1245px;
+            margin-top: -65px;
+        }
+        .post_del_holder{
+            text-align-last: center;
+            margin-top: 100px;
+            margin-left: 200px;
+            background-color: rgb(90, 90, 90);
+            height: 400px;
+            width: 1500px
+        }
+        .post_del_holder h{
+            font-size: 28px;
+            margin-left: -200px;
+        }
+        .post_del_holder label,input{
+            font-size: 22px;
+        }
+        .change_password{
+            text-align-last: center;
+            margin-top: 100px;
+            margin-left: 200px;
+            background-color: rgb(90, 90, 90);
+            height: 500px;
+            width: 1500px
+        }
+        .change_password h{
+            font-size: 28px;
+            margin-left: -260px;
+        }
+        .change_password label,input{
+            font-size: 22px;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <button class="back_button" onclick="history.back()">BACK</button>
+        <div class="dropdown">
+            <button class="dropbtn">logged in as {{username}}</button>
+            <div class="dropdown-content">
+              <a href="./profile/{}".format(rollno)>My Profile</a>
+              <a href="./settings">Settings</a>
+              <a href="./logout">Logout</a>
+            </div>
+        </div>
+    </header>
+    <form method="POST" class="post_del_holder">
+        <br><br><br><br>
+        <h>Request deletion of post</h>
+        <br><br><br><br><br>
+        <label class="post_number">post number : </label>
+        <input name="post_number" class="post_number"/>
+        <br><br><br><br><br>
+        <input class="post_del_button" type = 'submit' value = 'SEARCH'/>
+    </form>
+    <form method="POST" class="change_password">
+        <br><br><br><br>
+        <h>Change password</h>
+        <br><br><br><br><br>
+        <label class="old_password">old password : </label>
+        <input name="old_password" class="old_password">
+        <br><br>
+        <label class="new_password1">new password : </label>
+        <input name="new_password1" class="new_password1">
+        <br><br>
+        <label class="new_password2">new password : </label>
+        <input name="new_password2" class="new_password2">
+        <br><br><br><br><br>
+        <input class="change_password_button" type = 'submit' value = 'SEARCH'/>
+    </form>
 </body>
 </html>

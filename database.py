@@ -198,3 +198,20 @@ def followings_followers_list(rollno):
         if rollno in content[i]:
             followers.append(change_rollno_to_username("@" + i))
     return [following, followers]
+
+
+
+def del_post(post_number):
+    f = open("./data/posts.bin", "rb")
+    content = pickle.load(f)
+    f.close()
+    content.pop(int(post_number))
+    f = open("./data/posts.bin", "wb")
+    pickle.dump(content, f)
+    f.close()
+
+def change_password(rollno, old_password, new_password1, new_password2):
+    content = get_login_info()
+    if content[rollno] == old_password:
+        if new_password1 == new_password2:
+            put_login_info(rollno, new_password2)
