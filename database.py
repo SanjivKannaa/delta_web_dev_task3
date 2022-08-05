@@ -186,3 +186,15 @@ def push_new_post(message, username):
     f = open("./data/posts.bin", "wb")
     pickle.dump(content, f)
     f.close()
+
+
+def followings_followers_list(rollno):
+    content = get_follow()
+    following = ["Following"]
+    followers = ["Followers"]
+    for i in content[rollno]:
+        following.append(change_rollno_to_username("@" + i))
+    for i in content.keys():
+        if rollno in content[i]:
+            followers.append(change_rollno_to_username("@" + i))
+    return [following, followers]
