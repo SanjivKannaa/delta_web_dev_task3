@@ -1,4 +1,4 @@
-# delta_web_dev_task3
+# Slambook
 
 How to run
 
