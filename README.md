@@ -5,7 +5,7 @@ How to run
 - clone the repository
 - run the below script on terminal
 
-'
-$ source venv/bin/activate
-$ python3 main.py
-'
+
+> $ source venv/bin/activate
+> $ python3 main.py
+
