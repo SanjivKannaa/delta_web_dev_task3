@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful login | Slambook</title>
+    <style>
+        body {
+            background-color: rgb(53, 53, 53);
+        }
+        .div {
+            padding-top: 200px;
+            text-align: center;
+        }
+        .bruh {
+            background-color: rgb(50, 50, 50);
+            height: 50px;
+            width: 500px;
+            color: whitesmoke;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="bruh">Successfully logged in</button>
+        <button class="bruh"><a href="./">click here</a> if not redirected...</button>
+    </div>login success
+    <script type="text/javascript">
+        function pausecomp(millis){
+                var date = new Date();
+                var curDate = null;
+                do { curDate = new Date(); }
+                while(curDate-date < millis);
+        }
+        pausecomp(10000);
+        window.onload = function() {
+            location.href = "./";
+        }
+    </script>
+</body>
+</html>

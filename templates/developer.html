@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>developer_information | Slambook</title>
+    <style>
+        body {
+            background-color: rgb(53, 53, 53);
+        }
+        .div {
+            padding-top: 200px;
+            text-align: center;
+        }
+        .bruh {
+            background-color: rgb(50, 50, 50);
+            height: 50px;
+            width: 500px;
+            color: whitesmoke;
+            font-size: 25px;
+        }
+        .bruh:hover {
+            background-color: rgb(50, 50, 50);
+            color: white;
+            transition: 0.5s;
+            -webkit-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function linkedin(){
+            window.open("https://www.linkedin.com/in/sanjiv-kannaa-jeganathan-532b16227/");
+        }
+
+        function github(){
+            window.open("https://github.com/SanjivKannaa");
+        }
+
+        function hackerrank(){
+            window.open("https://www.hackerrank.com/sanjiv_kannaa_j");
+        }
+
+        function codechef(){
+            window.open("https://www.codechef.com/users/sanjiv_2003");
+        }
+
+        function home(){
+            window.open("./home", "_self");
+        } 
+    </script> 
+    <div class="div">
+        <button class="bruh" onclick="linkedin()">LinkedIn</button>
+        <br><br><br>
+        <button class="bruh" onclick="github()">GitHub</button>
+        <br><br><br>
+        <button class="bruh" onclick="hackerrank()">HackerRank</button>
+        <br><br><br>
+        <button class="bruh" onclick="codechef()">CodeChef</button>
+        <br><br><br>
+        <button class="bruh" onclick="home()">Return to home page</button>
+    </div>
+</body>
+</html>
