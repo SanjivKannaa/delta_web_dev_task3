@@ -8,6 +8,7 @@ How to run
 
 > $ source venv/bin/activate
 > $ python3 main.py
+> open localhost port 5000 in your browser
 
 Features
 - authentication that allows users to register and login on to the site
@@ -16,6 +17,6 @@ Features
 - Unique Profile page for users
 - validates the registration forms
 - users can follow others users and get related posts on their feeds
-- users can request to delete a post if they are offensive
+- users can request to delete a post if they are feel its offensive
 
 
